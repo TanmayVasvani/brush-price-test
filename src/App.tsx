@@ -107,7 +107,7 @@ export function App() {
             <>
               {fit.sku.name} is inelastic on this estimate ({num(fit.elasticity)}). The Lerner
               formula does not give a finite positive price when elasticity is above −1. Inside the
-              tested band, contribution is still rising at the top, so the honest recommendation is
+              tested band, contribution is still rising at the top, so the recommendation is
               to test a higher price, not to declare an optimum the data never saw.
             </>
           )}{" "}

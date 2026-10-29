@@ -4,7 +4,7 @@ Log-log price elasticities from a randomised toothbrush price experiment, and th
 
 ![Brush price test](docs/screenshot.png)
 
-**Live:** _add your deployment URL here_ · **Author:** Tanmay Vaswani
+**Live:** https://tanmayvasvani.github.io/brush-price-test/ · **Author:** Tanmay Vaswani
 
 ## What it does
 
@@ -18,7 +18,7 @@ For each SKU the page shows:
 - **The full regression table** (intercept, ln price, promo, ln competitor, channel dummies, season).
 - **A revenue-weighted elasticity** across the line (−1.50 in the base panel).
 
-The Lerner price, cost × e / (e + 1), is reported only as a check. Where demand is inelastic (Kids, e ≈ −0.7) the page says a higher price should be tested rather than inventing an optimum; where the Lerner price falls outside the experiment (Charcoal, e ≈ −2.1) the recommendation stays inside the tested band.
+The Lerner price, cost × e / (e + 1), is reported only as a check. Where demand is inelastic (Kids, e ≈ −0.7) a higher price should be tested rather than an optimum invented; where the Lerner price falls outside the experiment (Charcoal, e ≈ −2.1) the recommendation stays inside the tested band.
 
 ## Method
 
@@ -26,10 +26,6 @@ The Lerner price, cost × e / (e + 1), is reported only as a check. Where demand
 - Each SKU is fit on its own by OLS of log units on log price, the promo dummy, log competitor index, three channel dummies and a seasonal sine. General trade is the omitted channel.
 - The decision curve holds the dummies at the general-trade, no-promo, competitor-at-100 cell and uses the estimated intercept and slope, never the true elasticity.
 - Contribution is (price − cash cost) × quantity, maximised by grid search between the minimum and maximum price observed for the SKU.
-
-## What is deliberately left out
-
-Cross-SKU cannibalisation, retailer margin pass-through, a non-constant elasticity (a logit or a kinked curve), channel-specific elasticities, and real sales data. R² is high because price was assigned by the experiment; observational retail data would not look like this, and the page says so.
 
 ## Checks
 
@@ -56,7 +52,7 @@ React 19, TypeScript (strict, `noUncheckedIndexedAccess`), Vite, Tailwind CSS 4,
 
 ## Data
 
-Every number on the page is synthetic, seeded and computed in the browser. The SKUs, prices and costs are modelled on a small Indian toothbrush line and are an illustration of method, not a pricing recommendation for any real product.
+The panel is synthetic and computed in the browser. Prices were randomised in the experiment.
 
 ## License
 
